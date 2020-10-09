@@ -111,3 +111,16 @@ img.imicon:hover {
     min-height: 150px;
 	overflow: hidden;
 }
+@media (max-width:550px) {
+	img.imnav {
+		height: 80px;
+	}
+	.newsbox {
+		width:60% !important;;
+		height:60px;
+	}
+	.newsbtn {
+		width:30%;
+		height:60px;
+	}
+}
