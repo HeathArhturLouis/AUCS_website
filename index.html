@@ -6,40 +6,42 @@
     <title>AUCS – Aberdeen University Computing Society</title>
 	<!-- CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="css/style.css">
 	<!-- JS, Popper.js, and jQuery -->
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+	<!-- MailChimp -->	
+		<script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/84260bee746efed1c4bae56c9/f5fdae168c4293946ed510378.js");</script>
 </head>
 <body>
 	<nav class="navbar sticky-top navbar-expand-md navbar-light">
 	  <a class="navbar-brand" href="index.html">
-		<img src="/img/AUCSLogo.svg" class="imnav" onerror="this.onerror=null; this.src='/img/AUCSLogo.svg'" alt="AUCS logo" />
+		<img src="img/AUCSLogo.svg" class="imnav" onerror="this.onerror=null; this.src='img/AUCSLogo.svg'" alt="AUCS logo" />
 	  </a>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
 		<span class="navbar-toggler-icon"></span>
 	  </button>
 	  <div class="collapse navbar-collapse" id="navbarText">   
 		<ul class="navbar-nav ml-auto">
-		  <li class="nav-item">
+		  <li class="nav-item active">
 			<a class="nav-link" href="index.html">Home</a>
 		  </li>
-		  <!--
 		  <li class="nav-item">
 			<a class="nav-link" href="events.html">Events</a>
 		  </li>
-		  -->
-		  <li class="nav-item active">
+		  <li class="nav-item">
 			<a class="nav-link" href="team.html">Team</a>
 		  </li>
+		  <!--
 		  <li class="nav-item">
 			<a class="nav-link" href="contact.html">Contact</a>
 		  </li>
+		  -->
 		</ul>
 	  </div>
 	</nav>
-	<br><br><br>
+	<br><br><br><br><br>
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6 col-md-12">
@@ -48,30 +50,94 @@
 					<h1 style="font-weight: 700;">Computing Society</h1>
 					<p>The Aberdeen University Computing Society provides a place for students to learn and share computing knowledge.
 					Our events include practical workshops led by members, talks by invited guest speakers and social events such as coding challenges, movie nights and gaming competitions.</p>
-					<a href="https://www.ausa.org.uk/societies/society/26976/" class="btn btn-dark btn-lg">Get your membership!</a>
+					<a href="https://www.ausa.org.uk/societies/society/26976/" target="_blank" class="btn btn-dark btn-lg">Get your membership!</a>
 					<div style="margin-top: 15px;">
 						<a class="btn" target="_blank" href="https://www.facebook.com/AUComputingSociety">
-							<img class="imicon" src="/img/facebook.svg" alt="Link to AUCS facebook page">
+							<img class="imicon" src="img/facebook.svg" alt="Link to AUCS facebook page">
 						</a>
-						<a class="btn" target="_blank" href="https://discord.gg/S3gXSx">
-							<img class="imicon" src="/img/discord.svg" alt="Invite link to AUCS discord">
+						<a class="btn" target="_blank" href="https://discord.gg/6U9xuaV">
+							<img class="imicon" src="img/discord.svg" alt="Invite link to AUCS discord">
 						</a>
 						<a class="btn" target="_blank" href="mailto:aucomputingsociety@gmail.com">
-							<img class="imicon" src="/img/email.svg" alt="AUCS Email address">
+							<img class="imicon" src="img/email.svg" alt="AUCS Email address">
 						</a>
 						<a class="btn" data-toggle="modal" data-target="#minecraftModal">
-							<img class="imicon" src="/img/minecraft.svg" alt="AUCS Minecraft server address">
+							<img class="imicon" src="img/minecraft.svg" alt="AUCS Minecraft server address">
 						</a>
 					</div>
 				</div>
 			</div>
 			<div class="col-lg-6 col-md-12">
 				<div class="marketing-image">
-					<img src="/img/AUCSLogo.svg" style="width: 100%;height: auto;" onerror="this.onerror=null; this.src='/img/AUCSLogo.svg'" alt="image" />
+					<img src="img/AUCSLogo.svg" style="width: 100%;height: auto;" onerror="this.onerror=null; this.src='img/AUCSLogo.svg'" alt="image" />
 				</div>
 			</div>
 		</div>
+		<br><br><br><br><br>
+		
+		<div class="row">
+			<div class="col-lg-6 col-md-6 overview-content">
+				<img src="img/discord.png" style="max-width: 100%;height: auto;" onerror="this.onerror=null; this.src='img/discord.png'" alt="image" />
+			</div>
+			<div class="col-lg-6 col-md-6 overview-img">
+				<div class="features-holder-content">
+						<div class="section-title">
+							<h2>Join our Discord Server</h2>
+							<p>Join our discord to chat with other members from the society.</p>
+							<a href="https://discord.gg/6U9xuaV" target="_blank" class="btn btn-dark btn-lg">Press to join!</a>
+						</div>
+					</div>
+			</div>
+		</div>
+		
+		<br><br><br><br><br>
+		
+		<div class="row">
+			<div class="col-lg-6 col-md-6 overview-content">
+				<div class="features-holder-content">
+					<div class="section-title">
+						<h2>Join our Minecraft Server</h2>
+						<p>Have fun playing on our minecraft server with other members from the society.
+						Our server runs the Java edition of Minecraft on version 1.16</p>
+						<a class="fakebtn-dark">IP: AUCS.ORG.UK</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-6 col-md-6 overview-img">
+				<img src="img/minecraft.jpg" style="max-width: 100%;height: auto;" onerror="this.onerror=null; this.src='img/minecraft.jpg'" alt="image" />
+			</div>
+		</div>
+		
+		<br><br><br><br><br>
+		
+		<div style="text-align:center;">
+			<h2>Subscribe to our newsletter</h2>
+			<p>By subscribing to the newsletter, you will get updates regarding all of our events and workshops.</p>
+			
+			<form action="https://gmail.us2.list-manage.com/subscribe/post?u=46aa5b978d810383a4a299efd&amp;id=ff8058f639" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+				<div class="mc-field-group" >
+					<div class="form-inline d-flex justify-content-center " >
+						<input type="email" value="" name="EMAIL" id="mce-EMAIL" class="form-control newsbox" placeholder="Your Email Address" required="" autocomplete="on">
+						<button type="submit" class="btn btn-dark newsbtn" value="Subscribe" name="subscribe" id="mc-embedded-subscribe">Subscribe</button>
+					</div>
+					<br>
+				</div>
+				<div id="mce-responses" class="clear">
+					<div class="response" id="mce-error-response" style="display:none"></div>
+					<div class="response" id="mce-success-response" style="display:none"></div>
+				</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+				<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_46aa5b978d810383a4a299efd_ff8058f639" tabindex="-1" value=""></div>
+				<div class="clear"></div>
+
+			</form>
+		
+			<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+		
+		</div>
 	</div>
+	
+	<!--
+	-->
 	
 
 <!-- MC Modal -->
@@ -95,7 +161,19 @@
     </div>
   </div>
 </div>
-	
+<footer>
+	<br><br>
+	<div style="text-align:center;">
+		<div class="social-icons-list" style="margin-top: 15px;">
+			<a class="btn" target="_blank" href="https://www.facebook.com/AUComputingSociety">
+				<img class="imicon" src="img/facebook.svg" alt="Link to AUCS facebook page">
+			</a>
+		</div>
+		<hr>
+		<h5>Developed with <img class="imicon" style="height: 20px;" src="img/heart.svg" alt="love"> and <img class="imicon" style="height: 30px;" src="img/code.svg" alt="code"> by Guilherme Manteigas</h5>
+		<h5>2020</h5>	
+	</div>
+</footer>
 </body>
 <script>
 function copyMC() {
