@@ -1,0 +1,11 @@
+img.imnav {
+	max-width: auto;
+	height: 100px;
+}
+img.imicon {
+	max-width: auto;
+	height: 40px;
+}
+img.imicon:hover {
+	transform: scale(1.1);
+}
