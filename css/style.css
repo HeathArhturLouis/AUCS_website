@@ -123,4 +123,14 @@ img.imicon:hover {
 		width:30%;
 		height:60px;
 	}
+	.bscreen{
+		display:none;
+	}
+	h1.short{
+		font-size: 2em !important;
+	}
+	h5.short{
+		font-size: 0.9em !important;
+	}
 }
+
