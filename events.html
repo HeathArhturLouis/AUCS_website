@@ -11,6 +11,7 @@
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
 	<nav class="navbar sticky-top navbar-expand-md navbar-light">
@@ -41,8 +42,10 @@
 	</nav>
 	<br><br><br>
 	<div class="container">
+		<div class="row" id="events">
 		
-		
+		</div>
+		<!--
 		<div class="row">
 			<div class="col-md-6">
 				<div class="events old" onclick="window.open('https://fb.me/e/9qaXt72BW','eventpage');">
@@ -121,7 +124,7 @@
 			</div>
 			-->
 		</div>
-		
+		-->
 		
 		
 	</div>
@@ -141,5 +144,50 @@
 		<h5>2020</h5>	
 	</div>
 </footer>
+<script>
+$.getJSON('https://graph.facebook.com/321273588327122/events?fields=id,name,description,start_time,cover&access_token=EAAJ2BlTRwKkBANwwWOWaP8BkdLwJZCPyeg3QmXDEtVo2p4jkhFCqegvzLu8WUBEoubOTaKNKvW0A280Dx7rgJFxk4uy9Yra5AIszbiyMZC3ln4yihwZBmawZBTcAmcUCXmp4EXTp4MIanatFfg8PUgQCgnnfzpPKoDX80GDAtdGWOpefDCH9wlcDVIdQyYUZD', function(data) {
+    // JSON result in `data` variable
+		for(var i = 0; i < data.data.length; i++) {
+			var e = data.data[i];
+			var time = getDate(e.start_time);
+			//var time = getDate(new Date(Date.parse(e.start_time)));
+			var url = "https:\/\/www.facebook.com\/events\/" + e.id + "'";
+			
+			var txt = document.getElementById("events").innerHTML + "<div class='col-md-6'><div class='events ";
+			if(Date.parse(new Date(e.start_time))-Date.parse(new Date())<0){txt += "old"}
+			txt += "' onclick='openurl(" + e.id + ")'>";
+			txt += "<img class='eventsimg' src='";
+			if (typeof e.cover != "undefined"){
+				txt += e.cover.source
+			}else{
+				txt += "img/AUCSLogo.png"
+			}
+			txt += "' alt='image'>"+
+			"<h5>" + e.name + "</h5>"+
+			"<p>" + e.description + "</p>"+
+			"<div class='card-footer text-muted'>" + time + "</div>"+
+			"</div>"+
+			"</div>";
+			
+
+			
+			document.getElementById("events").innerHTML = txt;
+		}
+		
+});
+
+function getDate(date){
+	var d = new Date(date);
+	var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+	var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+	var txt = "" + days[d.getDay()] + ", " + d.getDate() + " " + months[d.getMonth()] + "" + d.getFullYear() + " at " + d.getHours() + ":" + ((d.getMinutes()<10?'0':'') + d.getMinutes());
+	return txt;
+}
+
+function openurl(id){
+	var url = "https://www.facebook.com/events/" + id;
+	window.open(url,'eventpage');
+}
+</script>
 </body>
 </html>
