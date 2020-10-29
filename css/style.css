@@ -47,7 +47,7 @@ img.imicon:hover {
 	float: none;
     position: absolute;
     left: 50%;
-    margin-left: -50px !important;
+    margin-left: -150px !important;
     display: block;
 }
 .navbar-nav{
@@ -131,6 +131,14 @@ img.imicon:hover {
 	}
 	h5.short{
 		font-size: 0.9em !important;
+	}
+	.navbar-brand {
+		margin: 0; 
+		float: none;
+		position: absolute;
+		left: 50%;
+		margin-left: -50px !important;
+		display: block;
 	}
 }
 
